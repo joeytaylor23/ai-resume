@@ -1,0 +1,221 @@
+:root {
+  --text-color: black;
+  --background-color: whitesmoke;
+  --link-color: #3d85c6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  font-family: 'Fira Code', monospace;
+  background-color: whitesmoke;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #D3BC8D; /* Or use your theme color */
+  z-index: 1000; /* Ensures it stays above other content */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: 60px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+nav .name a {
+  color: var(--text-color);
+  font-size: 26px;
+  margin: 0 20px;
+}
+nav .nav-links a {
+  color: var(--text-color);
+  font-size: 18px;
+  margin: 0 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav .socials a {
+  position: relative;
+  margin: 0 10px;
+}
+
+.nav-links {   
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px; /* adjust spacing here */
+  margin-top: 10px; /* space from the element above */
+  margin-left: 90px;
+}
+.about {
+    display: none;
+    transform: translateY(0) scale(1);
+}
+.portfolio {
+    display: none;
+    transform: translateY(0) scale(1);
+}
+.contact {
+    display: none;
+    transform: translateY(0) scale(1);
+}
+
+.nav-links {
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    right: 3%;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-50%);
+    align-items: center;
+    justify-content: center;
+    .about-button, .portfolio-button, .contact-button, .home-button {
+        padding: 6px;
+        cursor: pointer;
+        background-color: #D3BC8D;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin: .7em 0;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, .3);
+
+        i {
+            font-size: 1.2rem;
+            color: grey;
+            pointer-events: none;
+        }
+    }
+}
+#homeIcon::after,
+#aboutIcon::after,
+#portfolioIcon::after,
+#contactIcon::after {
+    content: attr(data-tooltip);
+    position: absolute;
+  right: 100%; /* position left of the button */
+  margin-right: 10px; /* spacing between icon and tooltip */
+  background-color: #D3BC8D;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+  pointer-events: none;
+  }
+  
+  #homeIcon:hover::after,
+  #aboutIcon:hover::after,
+  #portfolioIcon:hover::after,
+  #contactIcon:hover::after {
+    opacity: 1;
+  }
+
+.socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px;
+  height: 80px;
+}
+.socials img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+  
+  .container {
+    max-width: 800px;
+    margin: auto;
+    background: #D3BC8D;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 2px solid black;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 60px;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 200px;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: vertical;
+    margin-top: 1rem;
+  }
+  
+  button {
+    display: block;
+    margin: 1.5rem auto 0;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  #results {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #e3f2fd;
+    border: 1px solid #90caf9;
+    border-radius: 8px;
+  }
+  
+  .source-code-btn {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.source-btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.source-btn:hover {
+    background-color: #218838;
+}
+

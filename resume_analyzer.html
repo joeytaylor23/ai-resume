@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Resume Analyzer</title>
+  <link rel="stylesheet" href="resume.css">
+
+  <script src="resume.js"></script>
+  <script src="https://kit.fontawesome.com/74e71b15ed.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div id="home"></div>
+  <nav>
+    <!--Name Link-->
+    <div class="name">
+      <a href="home.html"><strong>Joey O. Taylor</strong></a>
+    </div>
+    <!--Social Links-->
+    <div class="socials">
+      <a href="https://x.com/JoeSmoeDev" target="_blank"><img src="twitter.png" alt="Twitter"></a>
+      <a href="https://linkedin.com/in/joeytaylor23" target="_blank"><img src="black_linkedin.png" alt="LinkedIn"></a>
+      <a href="https://github.com/joeytaylor23" target="_blank"><img src="github.png" alt="GitHub"></a>
+    </div>
+  </nav>
+  
+  <div class="nav-links">
+    <a href="C:\Users\jt136\Portfolio_Website\home.html" id="homeIcon" data-tooltip="Home">
+        <i class="fa-solid fa-house" style="color: #000000;"></i>
+    </a>
+    <a href="C:\Users\jt136\Portfolio_Website\home.html#info" id="aboutIcon" data-tooltip="About Me">
+        <i class="fa-solid fa-user" style="color: #000000;"></i>
+    </a>
+    <a href="C:\Users\jt136\Portfolio_Website\home.html#projects" id="portfolioIcon" data-tooltip="Portfolio">
+        <i class="fa-solid fa-code" style="color: #000000;"></i>
+    </a>
+    <a href="C:\Users\jt136\Portfolio_Website\home.html#contact-section" id="contactIcon" data-tooltip="Contact">
+        <i class="fa-solid fa-envelope" style="color: #000000;"></i>
+    </a>
+</div>
+
+  <div class="container">
+    <h1>AI Resume Analyzer</h1>
+    <p>Paste your resume below and click "Analyze" to get feedback:</p>
+    <textarea id="resumeInput" placeholder="Paste your resume text here..."></textarea>
+    <button onclick="analyzeResume()">Analyze</button>
+    <div id="results"></div>
+  </div>
+
+  <div class="source-code-btn">
+    <a href="https://github.com/joeytaylor23/ai-resume" class="source-btn" target="_blank">View Source Code</a>
+</div>
+</body>
+</html>
